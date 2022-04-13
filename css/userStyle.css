@@ -1,0 +1,419 @@
+/* Font Famiy */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+/* SCROLL BAR */
+
+ ::-webkit-scrollbar {
+    width: 10px;
+}
+
+ ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+ ::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+ ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+
+/* GRID STYLINMG */
+
+.header {
+    grid-area: h;
+}
+
+.menu {
+    grid-area: m;
+}
+
+.main {
+    grid-area: p;
+}
+
+.footer {
+    grid-area: f;
+}
+
+.mainContainer {
+    display: grid;
+    grid-template-areas: 'h h h h h h h h h h h h' 'm p p p p p p p p p p p' 'f f f f f f f f f f f f';
+}
+
+
+/* Header Styling */
+
+.header {
+    background: #1D1D1D;
+    display: flex;
+    height: 80px;
+}
+
+.header .logo {
+    flex: 4;
+    display: flex;
+    padding: 15px 10px 15px 40px;
+}
+
+.header .logo img {
+    height: 50px;
+}
+
+.header .logo p {
+    font-family: 'Rubik Microbe', cursive;
+    color: white;
+    font-size: 20px;
+    padding: 15px 10px 15px 10px;
+}
+
+.header .topMenu {
+    flex: 3;
+}
+
+.header .topMenu ul {
+    display: flex;
+    padding: 30px 20px 30px 20px;
+    justify-content: space-evenly;
+}
+
+.header .topMenu ul li {
+    list-style: none;
+    padding: 0px 5px 0px 0px;
+}
+
+.header .topMenu ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.header .topMenu ul li a:hover {
+    color: #76C5F0;
+}
+
+.header .topMenu ul li a:active {
+    color: gray;
+}
+
+.header hr {
+    margin-top: 10px;
+    height: 60px;
+}
+
+.header .topSocialIcon {
+    flex: 1;
+    display: flex;
+    padding: 25px 10px 30px 10px;
+    justify-content: space-evenly;
+}
+
+.header .topSocialIcon i {
+    color: white;
+    padding: 0px 5px;
+}
+
+.header .topSocialIcon i:hover {
+    color: #76C5F0;
+}
+
+.header .topSocialIcon i:active {
+    color: gray;
+}
+
+.header .hButton {
+    padding: 25px 40px 20px 10px;
+}
+
+.header .hButton button {
+    color: #76C5F0;
+    background: white;
+    border: none;
+    border-radius: 5px;
+    padding: 7px 12px;
+    font-size: 15px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.header .hButton button:hover {
+    color: white;
+    background: #76C5F0;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%
+}
+
+
+/* Side Menu Styling */
+
+.menu {
+    background: #1D1D1D;
+    padding: 30px 00px 20px 0px;
+}
+
+.menu h2 {
+    padding-left: 60px;
+    color: white;
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.menu ul li {
+    padding: 10px 10px 0px 80px;
+}
+
+.menu ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.menu ul li a:hover {
+    color: #76C5F0;
+}
+
+.menu ul li a:active {
+    color: gray;
+}
+
+
+/* Main Styling */
+
+.main {
+    background: #1D1D1D;
+    padding: 50px 20px;
+}
+
+.main h2 {
+    color: white;
+    padding-bottom: 20px;
+    font-size: 25px;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #76C5F0;
+}
+
+.main .allPosts {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    justify-content: space-evenly;
+}
+
+.main .post {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: auto;
+    width: 300px;
+    padding: 20px;
+    border: 2px solid #76C5F0;
+    border-radius: 7px;
+    margin: 10px 5px;
+}
+
+.main .post .mainPart h2 {
+    all: initial;
+    color: white;
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.main .post .mainPart p {
+    color: white;
+    font-size: 15px;
+    font-family: 'Roboto', sans-serif;
+    padding: 5px 0px;
+}
+
+.main .post .mainPart p a {
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.main .post .mainPart img {
+    width: 260px;
+}
+
+.main .post .mainPart h3 {
+    padding-top: 10px;
+    color: white;
+    font-size: 18px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.main .post .mainPart h3 a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.main .post .mainPart .des {
+    all: initial;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    line-height: 20px;
+    font-size: 15px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+}
+
+.main .post .mainPart a:hover {
+    color: #76C5F0;
+}
+
+.main .post .button button {
+    margin-top: 10px;
+    color: #76C5F0;
+    background: white;
+    border: none;
+    padding: 5px 5px;
+    border-radius: 2px;
+}
+
+.main .post .button button:hover {
+    background-color: #76C5F0;
+    color: white;
+}
+
+.main .spost {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: auto;
+    width: 600px;
+    padding: 20px;
+    border: 2px solid #76C5F0;
+    border-radius: 7px;
+    margin: 10px 5px;
+}
+
+.main .spost .mainPart h2 {
+    all: initial;
+    color: white;
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.main .spost .mainPart p {
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    padding: 5px 0px;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.main .spost .mainPart p a {
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.main .spost .mainPart img {
+    width: 560px;
+}
+
+.main .spost .mainPart h3 {
+    color: white;
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+    padding-top: 10px;
+}
+
+.main .spost .mainPart h3 a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.main .spost .mainPart a:hover {
+    color: #76C5F0;
+}
+
+.main .spost .mainPart .des {
+    all: initial;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    line-height: 20px;
+    font-size: 15px;
+}
+
+
+/* Footer Styling */
+
+.footer {
+    text-align: center;
+    background: #1D1D1D;
+    height: 150px;
+    padding-top: 20px;
+}
+
+.footer .logo {
+    border-top: 1px solid #76C5F0;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 10px;
+}
+
+.footer .logo img {
+    height: 50px;
+}
+
+.footer .logo p {
+    font-family: 'Rubik Microbe', cursive;
+    color: white;
+    font-size: 20px;
+    padding: 15px 10px 15px 10px;
+}
+
+.footer .policy {
+    padding: 10px 0px;
+}
+
+.footer .policy a {
+    padding: 0px 15px;
+    text-decoration: none;
+    color: gray;
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.footer .info a {
+    padding: 0px 15px;
+    text-decoration: none;
+    color: gray;
+    font-size: 10px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.footer a:hover {
+    color: #76C5F0;
+}
+
+.footer a:active {
+    color: white;
+}
+
+
+/* Resposive Styling */

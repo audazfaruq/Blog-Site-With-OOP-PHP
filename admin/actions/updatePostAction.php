@@ -1,0 +1,42 @@
+<?php
+include "../inc/adminHeader.php";
+require "../database/database.php";
+session_start();
+if(!isset($_SESSION ['username']))
+{
+    header("Location: ../index.php");
+}
+else
+{
+    if(isset($_FILES['image'])){
+        $error = array();
+        $file_name = $_FILES['image']['name'];
+        $file_size = $_FILES['image']['size'];
+        $file_tmp = $_FILES['image']['tmp_name'];
+        if(empty($error)==true){
+            $random = uniqid();
+            move_uploaded_file($file_tmp,"../uploads/.$random.$file_name");
+        }
+        else{
+            print_r($error);
+            die();
+        }
+    }
+    $author = $_SESSION['userid'];
+    $post_id = $_POST['p_id'];
+    $title = $_POST['title'];
+    $category = $_POST['category'];
+    $desc = $_POST['description'];
+    $date = date("d M, Y");
+    $update_query = "UPDATE post SET p_title='$title',p_author=$author,p_category=$category,p_description='$desc',p_image='$random.$file_name',p_date='$date' where p_id=$post_id";
+    $db = new database();
+    $result = $db->insert_data($update_query);
+    
+    if($result == true){
+        header("Location: ../dashboard/mainDashBoard.php");
+    }
+    else{
+        echo "error";
+    }
+}
+    ?>
