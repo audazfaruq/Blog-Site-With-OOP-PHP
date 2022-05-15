@@ -24,7 +24,7 @@
                 header("Location: ../dashboard/mainDashboard.php");
             }
             else{
-                echo "Your Crediantials are Wrong";
+                header("Location: ../dashboard/wrongEntry.php");
             }
 }
 ?>
