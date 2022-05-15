@@ -2,7 +2,7 @@
 session_start();
 if(isset($_SESSION ['username']))
 {
-    header("Location:http://localhost:3000/admin/dashboard/mainDashBoard.php");
+    header("Location: dashboard/mainDashBoard.php");
 }
 else
 {

@@ -7,7 +7,7 @@ require "../database/database.php";
     $db = new database();
     $result = $db->delete_data($delete_query);
     if ($result == true) {
-        header("Location: http://localhost:3000/admin/dashboard/mainDashBoard.php");
+        header("Location: ../dashboard/mainDashBoard.php");
     } else {
         echo "Error deleting the post. Try again later.";
     }

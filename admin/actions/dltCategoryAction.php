@@ -7,9 +7,9 @@ require "../database/database.php";
     $db = new database();
     $result = $db->delete_data($delete_query);
     if ($result == true) {
-        header("Location: http://localhost:3000/admin/dashboard/allCategory.php");
+        header("Location: ../dashboard/allCategory.php");
     } else {
-        echo "Error deleting the post. Try again later.";
+        echo "Error deleting the Category. Try again later.";
     }
 
 ?>
